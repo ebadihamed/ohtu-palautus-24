@@ -9,8 +9,8 @@ logger("Aloitetaan")
 x = int(input("luku 1: "))
 y = int(input("luku 2: "))
 
-print(f"{summa(x, y)}")
-print(f"{erotus(x, y)}")
+print(f"Lukuejen {x} + {y} summa on {summa(x, y)}")
+print(f"Lukujen {x} - {y} erotus on {erotus(x, y)}")
 
 logger("Lopetetaan")
 print("goodbye!") # Lisäys bugikorjaus-branchissa
