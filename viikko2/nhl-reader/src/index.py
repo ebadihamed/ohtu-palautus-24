@@ -10,11 +10,15 @@ def main():
 
     players = []
 
-    for player_dict in response:
-        if player_dict['nationality'] == 'FIN':
-            player = Player(player_dict)
-            players.append(player)
+    def is_finnish(n):
+        return n['nationality'] == 'FIN'
+    
+    fin_players = filter(is_finnish, response)
 
+    for player_dict in fin_players:
+        player = Player(player_dict)
+        players.append(player)
+        
     print("Players from FIN:")
 
     for player in players:
